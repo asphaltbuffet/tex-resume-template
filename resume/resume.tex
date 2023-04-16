@@ -1,0 +1,147 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2022 moderncv maintainers (github.com/moderncv).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% adjust the page margins
+\usepackage[scale=0.80]{geometry}
+% \setlength{\footskip}{136.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% font loading
+% for luatex and xetex, do not use inputenc and fontenc
+% see https://tex.stackexchange.com/a/496643
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[english]{babel}  % FIXME: using spanish breaks moderncv
+
+% personal data
+\name{YOUR}{NAME}
+\title{KEYWORD, ANOTHER KEYWORD, MORE KEYWORD}                               % optional, remove / comment the line if not wanted
+% \address{123 Fake St}{Anytown, VA 22911}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1~(434)~867-5309}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{foo@fake.com}                               % optional, remove / comment the line if not wanted
+\homepage{fake-site.com}                         % optional, remove / comment the line if not wanted
+
+% Social icons
+\social[linkedin]{eustice-mcfake}                        % optional, remove / comment the line if not wanted
+\social[github]{mcfake}                              % optional, remove / comment the line if not wanted
+% \social[gitlab]{name}                              % optional, remove / comment the line if not wanted
+% \social[signal]{number}                       % optional, remove / comment the line if not wanted
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Summary}
+\cvitem{}{Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.}
+
+% \section{Notable Highlights}
+% \cvlistitem{Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.}
+% \cvlistitem{Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.}
+% \cvlistitem{ Neque porro quisquam est, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.}
+
+\section{Key Professional Skills}
+\cvitem{Skill A}{
+    \begin{itemize}
+        \item Ut enim ad minima veniam, quis nostrum exercitationem.
+        \item Ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+        \item Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.
+        \item At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.
+    \end{itemize}}
+\cvitem{Other Skill}{
+    \begin{itemize}
+        \item Et harum quidem rerum facilis est et expedita distinctio.
+        \item Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.
+        \item Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
+        \item Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+    \end{itemize}}
+\cvitem{Skill C}{
+    \begin{itemize}
+        \item Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+        \item doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.
+        \item dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.
+        \item consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+    \end{itemize}}
+
+
+\section{Experience}
+\cventry{\textbf{2019--2023}}{Some Company}{City}{State}{}{}
+
+\cventry{\footnotesize{2021--2023}}{Better Job}{}{}{}{
+    \begin{itemize}
+        \item consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore.
+        \item magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.
+        \item Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+        \item Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.
+        \item Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+    \end{itemize}}
+
+\cventry{\footnotesize{2019--2021}}{A Job}{Department}{}{}{
+    \begin{itemize}
+        \item Et harum quidem rerum facilis est et expedita distinctio.
+        \item Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.
+        \item Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
+        \item Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+    \end{itemize}}
+
+\subsection{}
+\cventry{\textbf{2018-2019}}{Company A}{City}{State}{}{}
+
+\cventry{\footnotesize{2018--2019}}{Some Job}{}{}{}{
+    \begin{itemize}
+        \item Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+        \item doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.
+        \item dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.
+        \item consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+    \end{itemize}}
+
+\section{Technical Skills}
+\cvdoubleitem{Languages}{Python, Cobra, Asp, Garter}{OS}{Windows, Doors, Ladders}
+\cvdoubleitem{Source control}{Git, R, Done}{Monitoring}{Salt, Cumin, Paprika}
+\cvdoubleitem{Methodologies}{Scrum, Huddle, Ambush}{SDLC Tools}{Confluence, Divergence}
+
+\section{Education \textbar\ Certifications}
+% \cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
+\cventry{2023}{BS}{University of Phoenix}{Forgery}{}{}
+\cventry{2015}{Level 2}{School of Hard Knocks}{}{}{}
+\cventry{2012}{MS}{Totally Real School University}{Knowing Things \& Stuff}{}{}
+\cventry{2006}{BS}{Army School}{General Studies}{}{}
+
+\section{Hobbies \textbar\ Interests}
+\cvlistdoubleitem{Crying}{Pseudomorphism}
+\cvlistdoubleitem{Basket Weaving}{Stoicism}
+
+\end{document}
+
+
+%% end of file `template.tex'.

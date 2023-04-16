@@ -1,0 +1,32 @@
+name: "Build"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: "Build"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+        
+      - name: Compile Latex Documents
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: |
+            resume/resume.tex
+            cover-letter/coverletter.tex
+        env:
+          TEXINPUTS: ".:./resume//:./cover-letter//:"
+          
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-output
+          path: |
+            *.pdf
+            *.log
