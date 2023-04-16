@@ -1,4 +1,4 @@
-# Ben Lechlitner Resume
+# Template Resume
 
 [![Common Changelog](https://common-changelog.org/badge.svg)](https://common-changelog.org)
 
